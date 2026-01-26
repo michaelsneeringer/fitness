@@ -33,6 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Mobile hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (navToggle && navLinksContainer) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navLinksContainer.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded',
+                navLinksContainer.classList.contains('open'));
+        });
+
+        // Close mobile menu when a non-dropdown link is clicked
+        navLinksContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (!this.closest('.nav-dropdown') || this.closest('.dropdown-menu')) {
+                    navToggle.classList.remove('active');
+                    navLinksContainer.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
+
     // Dropdown functionality for touch devices
     const dropdowns = document.querySelectorAll('.nav-dropdown');
 
@@ -58,21 +82,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close dropdowns when clicking outside
+    // Close dropdowns and mobile menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.nav-dropdown')) {
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
         }
+        if (!e.target.closest('.main-nav')) {
+            if (navToggle && navLinksContainer) {
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
     });
 
-    // Close dropdowns on escape key
+    // Close dropdowns and mobile menu on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
+            if (navToggle && navLinksContainer) {
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         }
     });
 });
