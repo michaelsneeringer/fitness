@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const commonOptions = {
         responsive: true,
         maintainAspectRatio: true,
+        aspectRatio: 2,
         plugins: {
             legend: {
                 display: true,
