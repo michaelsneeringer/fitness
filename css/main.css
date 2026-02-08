@@ -441,7 +441,7 @@ section {
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-sm);
     font-size: 1.25rem;
-    color: var(--text-dark);
+    color: var(--text-medium);
 }
 
 .site-intro ul {
