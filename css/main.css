@@ -685,6 +685,72 @@ section {
     background-color: var(--bg-medium);
 }
 
+/* Why Not Panel - Distinct styling */
+.why-not-panel {
+    text-align: center;
+    background-color: #fef3c7;
+    border-top: 1px solid #fde68a;
+    border-bottom: 1px solid #fde68a;
+}
+
+.why-not-panel h2 {
+    color: var(--text-dark);
+}
+
+.why-not-panel p {
+    color: var(--text-medium);
+}
+
+/* Getting Started Section */
+.getting-started {
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
+}
+
+.getting-started-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.getting-started-step {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.getting-started-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+}
+
+.getting-started-step h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.15rem;
+}
+
+.getting-started-step p {
+    font-size: 0.95rem;
+}
+
 /* CTA Section - Gradient */
 .cta {
     text-align: center;
@@ -1160,6 +1226,24 @@ li {
 
     .benefit-item {
         background-color: var(--bg-light);
+    }
+
+    .why-not-panel {
+        background-color: #422006;
+        border-color: #78350f;
+    }
+
+    .why-not-panel h2 {
+        color: var(--text-dark);
+    }
+
+    .why-not-panel p {
+        color: var(--text-medium);
+    }
+
+    .getting-started-step {
+        background: var(--bg-light);
+        border-color: var(--border-color);
     }
 
     footer {
