@@ -154,7 +154,6 @@ a:hover {
     display: flex;
     list-style: none;
     gap: var(--spacing-xs);
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -1193,7 +1192,7 @@ li {
 }
 
 .btn-calculate {
-    background: var(--accent-warm);
+    background: var(--primary-color);
     color: white;
     font-weight: 700;
     font-size: 1rem;
@@ -1207,9 +1206,9 @@ li {
 }
 
 .btn-calculate:hover {
-    background: #e68a00;
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
 }
 
 .calc-result {
