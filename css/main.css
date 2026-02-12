@@ -495,16 +495,16 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-md);
     background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
     margin-bottom: var(--spacing-md);
 }
 
 .expect-card-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     color: var(--primary-color);
 }
 
