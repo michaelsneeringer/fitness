@@ -90,7 +90,7 @@ h3 {
 p {
     margin-bottom: var(--spacing-sm);
     color: var(--text-medium);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.75;
 }
 
@@ -439,7 +439,7 @@ section {
     padding-left: var(--spacing-md);
     position: relative;
     color: var(--text-medium);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.75;
 }
 
@@ -484,7 +484,7 @@ section {
 }
 
 .site-intro p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.75;
 }
 
@@ -507,7 +507,7 @@ section {
     padding-left: var(--spacing-md);
     position: relative;
     color: var(--text-medium);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.75;
 }
 
