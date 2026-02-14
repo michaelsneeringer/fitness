@@ -33,7 +33,6 @@
         </div>
     </header>
 
-    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1600&q=80" alt="Woman running outdoors for cardiovascular fitness" class="page-hero-photo">
 
     <main>
         <!-- THE SCIENCE -->
@@ -43,11 +42,63 @@
                 <p>VO2 max (maximal oxygen uptake) is the gold standard measure of cardiovascular fitness. It represents the maximum amount of oxygen your body can utilize during intense exercise, measured in milliliters of oxygen per kilogram of body weight per minute (ml/kg/min). It is one of the strongest predictors of all-cause mortality ever identified in medical research.</p>
 
                 <div class="key-findings">
-                    <h3>Why It Matters</h3>
+                    <h3>The Data</h3>
                     <div class="chart-container">
                         <canvas id="vo2maxMortalityChart"></canvas>
                         <p class="chart-caption">Mortality risk decreases substantially with each increase in VO2 max level</p>
                     </div>
+                </div>
+
+                <div class="key-findings">
+                    <h3>VO2 Max Benchmarks by Age (ml/kg/min)</h3>
+                    <p>Use the tables below to identify which quartile you fall into based on your estimated VO2 max and age. The goal is to reach the Third or Highest quartile. Research shows that moving out of the Lowest quartile produces the greatest reduction in mortality risk.</p>
+
+                    <h4 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Men</h4>
+                    <div class="benchmark-table-container">
+                        <table class="benchmark-table">
+                            <thead>
+                                <tr>
+                                    <th>Age</th>
+                                    <th>Lowest Quartile</th>
+                                    <th>Second Quartile</th>
+                                    <th>Third Quartile</th>
+                                    <th>Highest Quartile</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>20-29</td><td class="q1">&lt; 38</td><td class="q2">38 - 42</td><td class="q3">42 - 48</td><td class="q4">&gt; 48</td></tr>
+                                <tr><td>30-39</td><td class="q1">&lt; 35</td><td class="q2">35 - 39</td><td class="q3">39 - 45</td><td class="q4">&gt; 45</td></tr>
+                                <tr><td>40-49</td><td class="q1">&lt; 32</td><td class="q2">32 - 37</td><td class="q3">37 - 43</td><td class="q4">&gt; 43</td></tr>
+                                <tr><td>50-59</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 39</td><td class="q4">&gt; 39</td></tr>
+                                <tr><td>60-69</td><td class="q1">&lt; 24</td><td class="q2">24 - 29</td><td class="q3">29 - 35</td><td class="q4">&gt; 35</td></tr>
+                                <tr><td>70-79</td><td class="q1">&lt; 21</td><td class="q2">21 - 26</td><td class="q3">26 - 32</td><td class="q4">&gt; 32</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Women</h4>
+                    <div class="benchmark-table-container">
+                        <table class="benchmark-table">
+                            <thead>
+                                <tr>
+                                    <th>Age</th>
+                                    <th>Lowest Quartile</th>
+                                    <th>Second Quartile</th>
+                                    <th>Third Quartile</th>
+                                    <th>Highest Quartile</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>20-29</td><td class="q1">&lt; 32</td><td class="q2">32 - 36</td><td class="q3">36 - 42</td><td class="q4">&gt; 42</td></tr>
+                                <tr><td>30-39</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 38</td><td class="q4">&gt; 38</td></tr>
+                                <tr><td>40-49</td><td class="q1">&lt; 25</td><td class="q2">25 - 30</td><td class="q3">30 - 36</td><td class="q4">&gt; 36</td></tr>
+                                <tr><td>50-59</td><td class="q1">&lt; 22</td><td class="q2">22 - 27</td><td class="q3">27 - 32</td><td class="q4">&gt; 32</td></tr>
+                                <tr><td>60-69</td><td class="q1">&lt; 19</td><td class="q2">19 - 24</td><td class="q3">24 - 30</td><td class="q4">&gt; 30</td></tr>
+                                <tr><td>70-79</td><td class="q1">&lt; 17</td><td class="q2">17 - 22</td><td class="q3">22 - 28</td><td class="q4">&gt; 28</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-top: var(--spacing-sm);">Benchmarks derived from ACSM normative data and the Mandsager et al. (2018) fitness classifications.</p>
                 </div>
 
                 <div class="key-findings">
@@ -107,57 +158,6 @@
                     </div>
                 </div>
 
-                <div class="key-findings">
-                    <h3>VO2 Max Benchmarks by Age (ml/kg/min)</h3>
-                    <p>Use the tables below to identify which quartile you fall into based on your estimated VO2 max and age. The goal is to reach the Third or Highest quartile. Research shows that moving out of the Lowest quartile produces the greatest reduction in mortality risk.</p>
-
-                    <h4 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Men</h4>
-                    <div class="benchmark-table-container">
-                        <table class="benchmark-table">
-                            <thead>
-                                <tr>
-                                    <th>Age</th>
-                                    <th>Lowest Quartile</th>
-                                    <th>Second Quartile</th>
-                                    <th>Third Quartile</th>
-                                    <th>Highest Quartile</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>20-29</td><td class="q1">&lt; 38</td><td class="q2">38 - 42</td><td class="q3">42 - 48</td><td class="q4">&gt; 48</td></tr>
-                                <tr><td>30-39</td><td class="q1">&lt; 35</td><td class="q2">35 - 39</td><td class="q3">39 - 45</td><td class="q4">&gt; 45</td></tr>
-                                <tr><td>40-49</td><td class="q1">&lt; 32</td><td class="q2">32 - 37</td><td class="q3">37 - 43</td><td class="q4">&gt; 43</td></tr>
-                                <tr><td>50-59</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 39</td><td class="q4">&gt; 39</td></tr>
-                                <tr><td>60-69</td><td class="q1">&lt; 24</td><td class="q2">24 - 29</td><td class="q3">29 - 35</td><td class="q4">&gt; 35</td></tr>
-                                <tr><td>70-79</td><td class="q1">&lt; 21</td><td class="q2">21 - 26</td><td class="q3">26 - 32</td><td class="q4">&gt; 32</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h4 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Women</h4>
-                    <div class="benchmark-table-container">
-                        <table class="benchmark-table">
-                            <thead>
-                                <tr>
-                                    <th>Age</th>
-                                    <th>Lowest Quartile</th>
-                                    <th>Second Quartile</th>
-                                    <th>Third Quartile</th>
-                                    <th>Highest Quartile</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>20-29</td><td class="q1">&lt; 32</td><td class="q2">32 - 36</td><td class="q3">36 - 42</td><td class="q4">&gt; 42</td></tr>
-                                <tr><td>30-39</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 38</td><td class="q4">&gt; 38</td></tr>
-                                <tr><td>40-49</td><td class="q1">&lt; 25</td><td class="q2">25 - 30</td><td class="q3">30 - 36</td><td class="q4">&gt; 36</td></tr>
-                                <tr><td>50-59</td><td class="q1">&lt; 22</td><td class="q2">22 - 27</td><td class="q3">27 - 32</td><td class="q4">&gt; 32</td></tr>
-                                <tr><td>60-69</td><td class="q1">&lt; 19</td><td class="q2">19 - 24</td><td class="q3">24 - 30</td><td class="q4">&gt; 30</td></tr>
-                                <tr><td>70-79</td><td class="q1">&lt; 17</td><td class="q2">17 - 22</td><td class="q3">22 - 28</td><td class="q4">&gt; 28</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p style="font-size: 0.85rem; color: var(--text-light); margin-top: var(--spacing-sm);">Benchmarks derived from ACSM normative data and the Mandsager et al. (2018) fitness classifications.</p>
-                </div>
             </div>
         </section>
 
