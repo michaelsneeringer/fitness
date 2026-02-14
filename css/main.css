@@ -1145,6 +1145,13 @@ footer a:hover {
     transition: color 0.2s ease;
 }
 
+.footer-nav a + a::before {
+    content: "·";
+    margin-right: var(--spacing-md);
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
 .footer-nav a:hover {
     color: white;
 }
@@ -1580,9 +1587,7 @@ li {
     }
 
     .footer-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-xs);
+        gap: var(--spacing-xs) var(--spacing-sm);
     }
 
     .calc-result-value {
