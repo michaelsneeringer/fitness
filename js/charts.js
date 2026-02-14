@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ...commonOptions.plugins,
                     title: {
                         display: true,
-                        text: 'Mortality Risk Decreases with Higher VO2 Max'
+                        text: 'Mortality Risk by VO2 Max (Adults Age 40-65)'
                     }
                 }
             }
