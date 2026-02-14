@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Metrics Tracker - Compound Health</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #0f172a;
+            line-height: 1.4;
+            padding: 0.4in;
+            max-width: 8.5in;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 0.3rem;
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 0.3rem;
+        }
+
+        .header h1 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #4f46e5;
+            margin-bottom: 0.15rem;
+        }
+
+        .header .subtitle {
+            font-size: 0.65rem;
+            color: #64748b;
+        }
+
+        .month-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.3rem 0;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .month-line .blank {
+            border-bottom: 1px solid #cbd5e1;
+            flex: 0 0 150px;
+        }
+
+        .section {
+            margin-bottom: 0.35rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .section-header h2 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #1e1b4b;
+        }
+
+        .section-header .note {
+            font-size: 0.55rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.6rem;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            text-align: center;
+            padding: 0.2rem 0.15rem;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            font-size: 0.55rem;
+        }
+
+        td {
+            text-align: center;
+            padding: 0.3rem 0.15rem;
+            border: 1px solid #e2e8f0;
+            height: 1.1rem;
+        }
+
+        td.label-cell {
+            text-align: left;
+            font-weight: 600;
+            background-color: #fafbfc;
+            padding-left: 0.3rem;
+            font-size: 0.55rem;
+            color: #475569;
+            width: 110px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .bp-table td.label-cell {
+            width: 80px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 0.3rem;
+            padding-top: 0.2rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.5rem;
+            color: #94a3b8;
+        }
+
+        .print-btn {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .print-btn:hover {
+            opacity: 0.9;
+        }
+
+        @media print {
+            body {
+                padding: 0.3in;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            @page {
+                size: letter;
+                margin: 0.3in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Monthly Metrics Tracker</h1>
+        <div class="subtitle">Compound Health &mdash; Track the five metrics that matter</div>
+    </div>
+
+    <div class="month-line">
+        Month / Year: <span class="blank">&nbsp;</span>
+    </div>
+
+    <!-- GRIP STRENGTH -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Grip Strength (kg)</h2>
+            <span class="note">Test monthly &mdash; 3 trials, record highest from dominant hand</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:110px;"></th>
+                    <th>Trial 1</th>
+                    <th>Trial 2</th>
+                    <th>Trial 3</th>
+                    <th>Best</th>
+                    <th>Quartile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label-cell">Right Hand</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Left Hand</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- VO2 MAX -->
+    <div class="section">
+        <div class="section-header">
+            <h2>VO2 Max</h2>
+            <span class="note">Test every 4-6 weeks &mdash; 1.5-mile run for time &mdash; Formula: 483 / time (min) + 3.5</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:110px;"></th>
+                    <th>Date</th>
+                    <th>Run Time (mm:ss)</th>
+                    <th>Est. VO2 Max</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label-cell">Test 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Test 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- BODY FAT -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Body Fat %</h2>
+            <span class="note">Weigh daily, same conditions &mdash; record weekly averages below</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:110px;"></th>
+                    <th>Wk 1</th>
+                    <th>Wk 2</th>
+                    <th>Wk 3</th>
+                    <th>Wk 4</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label-cell">Avg Weight (lbs)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Avg Body Fat %</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- LDL CHOLESTEROL & BLOOD PRESSURE -->
+    <div class="two-col">
+        <div class="section">
+            <div class="section-header">
+                <h2>LDL Cholesterol (mg/dL)</h2>
+                <span class="note">From lipid panel</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:80px;"></th>
+                        <th>Date</th>
+                        <th>LDL</th>
+                        <th>Total</th>
+                        <th>HDL</th>
+                        <th>Trig</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="label-cell">Test 1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Test 2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Blood Pressure (mmHg)</h2>
+                <span class="note">Avg of readings 2 &amp; 3</span>
+            </div>
+            <table class="bp-table">
+                <thead>
+                    <tr>
+                        <th style="width:80px;"></th>
+                        <th>Wk 1</th>
+                        <th>Wk 2</th>
+                        <th>Wk 3</th>
+                        <th>Wk 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="label-cell">Systolic</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Diastolic</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        Compound Health &mdash; compoundhealth.com &mdash; Track the metrics that matter
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+</body>
+</html>
