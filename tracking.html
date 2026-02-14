@@ -34,10 +34,12 @@
     </header>
 
     <main>
-        <!-- HOW TO MEASURE SECTIONS -->
+        <!-- HOW TO MEASURE -->
         <section class="content-section">
             <div class="container">
-                <div class="measurement-methods">
+                <div class="key-findings">
+                    <h3>How To Measure</h3>
+
                     <div class="method">
                         <h3>How to Measure Grip Strength</h3>
                         <p><strong>Tool:</strong> A hand dynamometer (hydraulic or digital) is the standard instrument. Quality digital dynamometers are widely available for $25-50 and provide accurate, repeatable measurements. The Jamar hydraulic dynamometer is the gold standard used in clinical research, but any calibrated dynamometer will work for personal tracking.</p>
@@ -45,56 +47,46 @@
                         <p><strong>Why Grip Strength:</strong> Research from the PURE study (Leong et al., 2015) involving nearly 140,000 participants across 17 countries found that grip strength was a stronger predictor of all-cause mortality and cardiovascular death than systolic blood pressure. A 5 kg decrease in grip strength was associated with a 16% increase in all-cause mortality. Unlike other strength tests, grip testing requires no technical skill, carries zero injury risk, and can be performed by anyone regardless of fitness level or physical limitations.</p>
                         <p><strong>What It Tells You:</strong> Grip strength is not just about your hands and forearms. It reflects the overall strength of your musculoskeletal system and correlates strongly with total-body muscle function. Declining grip strength is one of the earliest measurable signs of age-related muscle loss (sarcopenia) and is used clinically to identify frailty risk in older adults.</p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="content-section alternate">
-            <div class="container">
-                <div class="key-findings">
-                    <h3>How to Measure VO2 Max</h3>
-                    <p><strong style="color: var(--text-light);">Cooper 1.5 Mile Run Test:</strong> The easiest and most accessible method for estimating your VO2 max is to run 1.5 miles for time. The 1.5-mile run test (also known as the Cooper 1.5-mile test) has been validated extensively against laboratory measurements and provides a reliable estimate of your cardiovascular fitness. All you need is a measured course (a standard 400-meter track works perfectly -- 6 laps) and a stopwatch.</p>
-                    <p><strong>What You Need:</strong> A standard 400m running track (6 laps = 1.5 miles) or a measured 1.5-mile route, and a stopwatch or phone timer.</p>
-                    <p><strong>Protocol:</strong> After a 5-10 minute warm-up of light jogging and dynamic stretching, run 1.5 miles as fast as you can sustain. Pace yourself -- starting too fast will slow you down overall. Record your total time in minutes and seconds.</p>
-                    <p><strong>The Formula:</strong> VO2 max (ml/kg/min) = 483 / time_in_minutes + 3.5. For example, if you run 1.5 miles in 12 minutes and 30 seconds (12.5 minutes), your estimated VO2 max is 483 / 12.5 + 3.5 = 42.1 ml/kg/min.</p>
-                    <p><strong>Accuracy:</strong> This field test typically estimates VO2 max within 10-15% of laboratory values. While not as precise as a lab test, it is more than adequate for tracking your fitness over time, which is the primary goal.</p>
+                    <div class="method">
+                        <h3>How to Measure VO2 Max</h3>
+                        <p><strong style="color: var(--text-light);">Cooper 1.5 Mile Run Test:</strong> The easiest and most accessible method for estimating your VO2 max is to run 1.5 miles for time. The 1.5-mile run test (also known as the Cooper 1.5-mile test) has been validated extensively against laboratory measurements and provides a reliable estimate of your cardiovascular fitness. All you need is a measured course (a standard 400-meter track works perfectly -- 6 laps) and a stopwatch.</p>
+                        <p><strong>What You Need:</strong> A standard 400m running track (6 laps = 1.5 miles) or a measured 1.5-mile route, and a stopwatch or phone timer.</p>
+                        <p><strong>Protocol:</strong> After a 5-10 minute warm-up of light jogging and dynamic stretching, run 1.5 miles as fast as you can sustain. Pace yourself -- starting too fast will slow you down overall. Record your total time in minutes and seconds.</p>
+                        <p><strong>The Formula:</strong> VO2 max (ml/kg/min) = 483 / time_in_minutes + 3.5. For example, if you run 1.5 miles in 12 minutes and 30 seconds (12.5 minutes), your estimated VO2 max is 483 / 12.5 + 3.5 = 42.1 ml/kg/min.</p>
+                        <p><strong>Accuracy:</strong> This field test typically estimates VO2 max within 10-15% of laboratory values. While not as precise as a lab test, it is more than adequate for tracking your fitness over time, which is the primary goal.</p>
 
-                    <div class="calculator-card" style="background: var(--bg-white); margin-top: var(--spacing-lg);">
-                        <h3>Calculate Your VO2 Max</h3>
+                        <div class="calculator-card" style="background: var(--bg-white); margin-top: var(--spacing-lg);">
+                            <h3>Calculate Your VO2 Max</h3>
 
-                        <div class="calc-form-row">
-                            <fieldset class="calc-fieldset">
-                                <legend>Run Time (mm:ss)</legend>
-                                <div style="display: flex; gap: var(--spacing-lg);">
-                                    <div class="calc-input-group">
-                                        <input type="number" id="calc-minutes" placeholder="Minutes" min="6" max="30">
-                                        <span>min</span>
+                            <div class="calc-form-row">
+                                <fieldset class="calc-fieldset">
+                                    <legend>Run Time (mm:ss)</legend>
+                                    <div style="display: flex; gap: var(--spacing-lg);">
+                                        <div class="calc-input-group">
+                                            <input type="number" id="calc-minutes" placeholder="Minutes" min="6" max="30">
+                                            <span>min</span>
+                                        </div>
+                                        <div class="calc-input-group">
+                                            <input type="number" id="calc-seconds" placeholder="Seconds" min="0" max="59">
+                                            <span>sec</span>
+                                        </div>
                                     </div>
-                                    <div class="calc-input-group">
-                                        <input type="number" id="calc-seconds" placeholder="Seconds" min="0" max="59">
-                                        <span>sec</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
+                                </fieldset>
+                            </div>
 
-                        <div class="calc-buttons">
-                            <button type="button" class="btn-reset" onclick="resetCalculator()">RESET</button>
-                            <button type="button" class="btn-calculate" onclick="calculateVO2Max()">CALCULATE</button>
-                        </div>
+                            <div class="calc-buttons">
+                                <button type="button" class="btn-reset" onclick="resetCalculator()">RESET</button>
+                                <button type="button" class="btn-calculate" onclick="calculateVO2Max()">CALCULATE</button>
+                            </div>
 
-                        <div class="calc-result" id="calc-result">
-                            <div class="calc-result-value" id="calc-vo2-value"></div>
-                            <div class="calc-result-label">Estimated VO2 Max (ml/kg/min)</div>
+                            <div class="calc-result" id="calc-result">
+                                <div class="calc-result-value" id="calc-vo2-value"></div>
+                                <div class="calc-result-label">Estimated VO2 Max (ml/kg/min)</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="content-section">
-            <div class="container">
-                <div class="measurement-methods">
                     <div class="method">
                         <h3>How to Measure Body Fat</h3>
                         <p>The most practical way to track your body fat percentage at home is with a <strong>digital body fat scale</strong> (also called a bioelectrical impedance scale or smart scale). These scales send a small electrical current through your body to estimate body fat percentage along with your weight.</p>
@@ -103,99 +95,28 @@
                         <p><strong>Why Daily:</strong> Body weight and body fat readings fluctuate day to day due to water retention, sodium intake, glycogen stores, and other factors. A single measurement on any given day is unreliable. By weighing daily, you can look at the <strong>weekly average</strong>, which smooths out these fluctuations and gives you a much more accurate picture of the real trend. If your weekly average is decreasing, you are losing fat. If it is increasing, you are gaining fat. It's that simple.</p>
                         <p><strong>What to Buy:</strong> Any reputable digital body fat scale in the $25-50 range will work. Look for one that measures body fat percentage via bioelectrical impedance. Popular options include scales from Withings, Renpho, and Eufy. Scales that sync to a phone app make it easy to track your weekly averages over time.</p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="content-section alternate">
-            <div class="container">
-                <div class="key-findings">
-                    <h3>How to Measure Cholesterol</h3>
-                    <p>LDL cholesterol is typically measured as part of a standard lipid panel during a routine blood draw. This test is a standard component of your annual physical exam and requires no special preparation beyond fasting for 9-12 hours before the blood draw (though non-fasting tests are increasingly accepted).</p>
-                    <p>The reality is that many people don't get annual physicals -- and that means they have no idea what their LDL cholesterol level is. This is a problem, because elevated LDL causes cumulative arterial damage silently over years and decades, often with no symptoms until a major cardiac event occurs.</p>
-                    <p><strong>Go to the doctor.</strong> Schedule an annual physical if you don't already have one. A standard lipid panel is one of the most valuable pieces of health data you can get, and it's covered by virtually all insurance plans as preventive care. Your lipid panel will report your total cholesterol, LDL cholesterol, HDL cholesterol, and triglycerides.</p>
-                    <p><strong>Know your numbers.</strong> Current guidelines generally recommend LDL cholesterol below 100 mg/dL for most adults, and below 70 mg/dL for those at higher cardiovascular risk. Discuss your results and target levels with your physician.</p>
-                </div>
-            </div>
-        </section>
+                    <div class="method">
+                        <h3>How to Measure Cholesterol</h3>
+                        <p>LDL cholesterol is typically measured as part of a standard lipid panel during a routine blood draw. This test is a standard component of your annual physical exam and requires no special preparation beyond fasting for 9-12 hours before the blood draw (though non-fasting tests are increasingly accepted).</p>
+                        <p>The reality is that many people don't get annual physicals -- and that means they have no idea what their LDL cholesterol level is. This is a problem, because elevated LDL causes cumulative arterial damage silently over years and decades, often with no symptoms until a major cardiac event occurs.</p>
+                        <p><strong>Go to the doctor.</strong> Schedule an annual physical if you don't already have one. A standard lipid panel is one of the most valuable pieces of health data you can get, and it's covered by virtually all insurance plans as preventive care. Your lipid panel will report your total cholesterol, LDL cholesterol, HDL cholesterol, and triglycerides.</p>
+                        <p><strong>Know your numbers.</strong> Current guidelines generally recommend LDL cholesterol below 100 mg/dL for most adults, and below 70 mg/dL for those at higher cardiovascular risk. Discuss your results and target levels with your physician.</p>
+                    </div>
 
-        <section class="content-section">
-            <div class="container">
-                <div class="key-findings">
-                    <h3>How to Measure Blood Pressure</h3>
-                    <p>Blood pressure monitors are inexpensive, widely available, and easy to use at home. You don't need to wait for a doctor's visit to know your numbers. A quality automatic upper-arm cuff monitor can be purchased for $30-60 and will give you reliable readings for years.</p>
-                    <p>Proper technique matters. Incorrect positioning or timing can produce readings that are off by 10-20 mmHg, which is enough to misclassify your blood pressure category entirely. Follow this protocol:</p>
-                    <ul>
-                        <li><strong>Test upon waking:</strong> Take your blood pressure first thing in the morning, before coffee, food, or exercise. Morning readings tend to be the most consistent and clinically meaningful.</li>
-                        <li><strong>Sit correctly:</strong> Sit upright in a chair with a back support. Place your feet flat on the floor with your legs uncrossed. Crossing your legs can raise systolic blood pressure by 2-8 mmHg.</li>
-                        <li><strong>Position the cuff at heart level:</strong> The cuff should be on your upper arm at the level of your heart. Rest your arm on a nearby armrest or table so the cuff is naturally at heart-level height. A cuff that is too high or too low will produce inaccurate readings.</li>
-                        <li><strong>Take 3 measurements:</strong> Take three consecutive readings, waiting about 1 minute between each. Discard the first reading (which tends to be elevated) and average the second and third readings. This gives you the most reliable result.</li>
-                        <li><strong>Test daily or weekly:</strong> Consistency is more important than frequency. Whether you test daily or a few times per week, tracking your readings over time will reveal your true blood pressure pattern and show whether your interventions are working.</li>
-                    </ul>
-                    <p><strong>Record your numbers.</strong> Write down each reading with the date and time, or use an app to track them. Bring your log to your doctor's appointments -- home readings are often more representative of your actual blood pressure than office readings, which can be artificially elevated by "white coat" anxiety.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section alternate">
-            <div class="container">
-                <h2>Why Track?</h2>
-                <p>What gets measured gets managed. Tracking your key health metrics allows you to:</p>
-                <ul>
-                    <li>Identify trends and patterns over time</li>
-                    <li>Validate that your interventions are working</li>
-                    <li>Catch potential health issues early</li>
-                    <li>Stay motivated by seeing objective progress</li>
-                    <li>Make data-driven adjustments to your approach</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="content-section alternate">
-            <div class="container">
-                <h2>Creating Your Tracking System</h2>
-                <p>An effective tracking system should be:</p>
-                <ul>
-                    <li><strong>Consistent:</strong> Measure under the same conditions</li>
-                    <li><strong>Sustainable:</strong> Simple enough to maintain long-term</li>
-                    <li><strong>Actionable:</strong> Data you can actually use to make decisions</li>
-                    <li><strong>Comprehensive:</strong> Cover all five key metrics</li>
-                </ul>
-
-                <h3>Sample Tracking Schedule</h3>
-                <div class="sample-schedule">
-                    <h4>Daily:</h4>
-                    <ul>
-                        <li>Blood pressure (if managing hypertension)</li>
-                        <li>Workout logging (on training days)</li>
-                    </ul>
-
-                    <h4>Weekly:</h4>
-                    <ul>
-                        <li>Body weight and body fat % (same day/time)</li>
-                        <li>Blood pressure check (if monitoring)</li>
-                    </ul>
-
-                    <h4>Monthly:</h4>
-                    <ul>
-                        <li>Grip strength test</li>
-                        <li>Progress photos</li>
-                        <li>Review trends and adjust approach</li>
-                    </ul>
-
-                    <h4>Quarterly:</h4>
-                    <ul>
-                        <li>DEXA scan or detailed body composition</li>
-                        <li>Lipid panel (LDL cholesterol)</li>
-                        <li>VO2 max field test</li>
-                    </ul>
-
-                    <h4>Annually:</h4>
-                    <ul>
-                        <li>Comprehensive health screening</li>
-                        <li>Advanced lipid testing</li>
-                        <li>Reassess goals and protocols</li>
-                    </ul>
+                    <div class="method">
+                        <h3>How to Measure Blood Pressure</h3>
+                        <p>Blood pressure monitors are inexpensive, widely available, and easy to use at home. You don't need to wait for a doctor's visit to know your numbers. A quality automatic upper-arm cuff monitor can be purchased for $30-60 and will give you reliable readings for years.</p>
+                        <p>Proper technique matters. Incorrect positioning or timing can produce readings that are off by 10-20 mmHg, which is enough to misclassify your blood pressure category entirely. Follow this protocol:</p>
+                        <ul>
+                            <li><strong>Test upon waking:</strong> Take your blood pressure first thing in the morning, before coffee, food, or exercise. Morning readings tend to be the most consistent and clinically meaningful.</li>
+                            <li><strong>Sit correctly:</strong> Sit upright in a chair with a back support. Place your feet flat on the floor with your legs uncrossed. Crossing your legs can raise systolic blood pressure by 2-8 mmHg.</li>
+                            <li><strong>Position the cuff at heart level:</strong> The cuff should be on your upper arm at the level of your heart. Rest your arm on a nearby armrest or table so the cuff is naturally at heart-level height. A cuff that is too high or too low will produce inaccurate readings.</li>
+                            <li><strong>Take 3 measurements:</strong> Take three consecutive readings, waiting about 1 minute between each. Discard the first reading (which tends to be elevated) and average the second and third readings. This gives you the most reliable result.</li>
+                            <li><strong>Test daily or weekly:</strong> Consistency is more important than frequency. Whether you test daily or a few times per week, tracking your readings over time will reveal your true blood pressure pattern and show whether your interventions are working.</li>
+                        </ul>
+                        <p><strong>Record your numbers.</strong> Write down each reading with the date and time, or use an app to track them. Bring your log to your doctor's appointments -- home readings are often more representative of your actual blood pressure than office readings, which can be artificially elevated by "white coat" anxiety.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -209,7 +130,7 @@
                     <div class="template-card" style="background-color: var(--bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
                         <h3>Monthly Metrics Tracker</h3>
                         <p>Comprehensive template for tracking all five key metrics throughout the month.</p>
-                        <p><strong>Includes:</strong> Strength, VO2 Max, Blood Pressure, Body Composition, and LDL tracking tables.</p>
+                        <p><strong>Includes:</strong> Grip Strength, VO2 Max, Body Fat, LDL Cholesterol, and Blood Pressure.</p>
                         <a href="tracking-template.html" class="btn" style="display: inline-block; margin-top: 1rem;">View & Print Template</a>
                     </div>
 
@@ -229,6 +150,7 @@
 
     <footer>
         <div class="container">
+            <hr>
             <div class="footer-nav">
                 [ <a href="strength.html">Strength</a> ]
                 [ <a href="vo2max.html">Cardio</a> ]
