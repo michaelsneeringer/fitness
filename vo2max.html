@@ -39,10 +39,10 @@
         <section id="the-science" class="content-section">
             <div class="container">
                 <h2>The Science</h2>
-                <p>VO2 max (maximal oxygen uptake) is the gold standard measure of cardiovascular fitness. It represents the maximum amount of oxygen your body can utilize during intense exercise, measured in milliliters of oxygen per kilogram of body weight per minute (ml/kg/min). It is one of the strongest predictors of all-cause mortality ever identified in medical research.</p>
 
                 <div class="key-findings">
                     <h3>The Data</h3>
+                    <p>Individuals with the lowest VO2 max scores (&lt;25 ml/kg/min) face roughly 4x the mortality risk over 10 years compared to those with the highest scores (45+). Even modest improvements from the lowest category produce significant reductions in death risk.</p>
                     <div class="chart-container">
                         <canvas id="vo2maxMortalityChart"></canvas>
                         <p class="chart-caption">Mortality risk decreases substantially with each increase in VO2 max level</p>
@@ -51,7 +51,7 @@
 
                 <div class="key-findings">
                     <h3>VO2 Max Benchmarks by Age (ml/kg/min)</h3>
-                    <p>Use the tables below to identify which quartile you fall into based on your estimated VO2 max and age. The goal is to reach the Third or Highest quartile. Research shows that moving out of the Lowest quartile produces the greatest reduction in mortality risk.</p>
+                    <p>Use the tables below to see how your VO2 max score maps to a fitness classification for your age and sex. The goal is to reach the Good or Excellent range. Research shows that moving out of the lowest scores produces the greatest reduction in mortality risk.</p>
 
                     <h4 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Men</h4>
                     <div class="benchmark-table-container">
@@ -59,19 +59,21 @@
                             <thead>
                                 <tr>
                                     <th>Age</th>
-                                    <th>Lowest Quartile</th>
-                                    <th>Second Quartile</th>
-                                    <th>Third Quartile</th>
-                                    <th>Highest Quartile</th>
+                                    <th>&lt;25</th>
+                                    <th>25-30</th>
+                                    <th>30-35</th>
+                                    <th>35-40</th>
+                                    <th>40-45</th>
+                                    <th>45+</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>20-29</td><td class="q1">&lt; 38</td><td class="q2">38 - 42</td><td class="q3">42 - 48</td><td class="q4">&gt; 48</td></tr>
-                                <tr><td>30-39</td><td class="q1">&lt; 35</td><td class="q2">35 - 39</td><td class="q3">39 - 45</td><td class="q4">&gt; 45</td></tr>
-                                <tr><td>40-49</td><td class="q1">&lt; 32</td><td class="q2">32 - 37</td><td class="q3">37 - 43</td><td class="q4">&gt; 43</td></tr>
-                                <tr><td>50-59</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 39</td><td class="q4">&gt; 39</td></tr>
-                                <tr><td>60-69</td><td class="q1">&lt; 24</td><td class="q2">24 - 29</td><td class="q3">29 - 35</td><td class="q4">&gt; 35</td></tr>
-                                <tr><td>70-79</td><td class="q1">&lt; 21</td><td class="q2">21 - 26</td><td class="q3">26 - 32</td><td class="q4">&gt; 32</td></tr>
+                                <tr><td>20-29</td><td class="q1">Very Low</td><td class="q1">Low</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q4">Excellent</td></tr>
+                                <tr><td>30-39</td><td class="q1">Very Low</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q3">Good</td><td class="q4">Excellent</td></tr>
+                                <tr><td>40-49</td><td class="q1">Very Low</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q4">Good</td><td class="q4">Excellent</td></tr>
+                                <tr><td>50-59</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td></tr>
+                                <tr><td>60-69</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td><td class="q4">Superior</td></tr>
+                                <tr><td>70-79</td><td class="q2">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td><td class="q4">Superior</td><td class="q4">Superior</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -82,19 +84,21 @@
                             <thead>
                                 <tr>
                                     <th>Age</th>
-                                    <th>Lowest Quartile</th>
-                                    <th>Second Quartile</th>
-                                    <th>Third Quartile</th>
-                                    <th>Highest Quartile</th>
+                                    <th>&lt;25</th>
+                                    <th>25-30</th>
+                                    <th>30-35</th>
+                                    <th>35-40</th>
+                                    <th>40-45</th>
+                                    <th>45+</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>20-29</td><td class="q1">&lt; 32</td><td class="q2">32 - 36</td><td class="q3">36 - 42</td><td class="q4">&gt; 42</td></tr>
-                                <tr><td>30-39</td><td class="q1">&lt; 28</td><td class="q2">28 - 33</td><td class="q3">33 - 38</td><td class="q4">&gt; 38</td></tr>
-                                <tr><td>40-49</td><td class="q1">&lt; 25</td><td class="q2">25 - 30</td><td class="q3">30 - 36</td><td class="q4">&gt; 36</td></tr>
-                                <tr><td>50-59</td><td class="q1">&lt; 22</td><td class="q2">22 - 27</td><td class="q3">27 - 32</td><td class="q4">&gt; 32</td></tr>
-                                <tr><td>60-69</td><td class="q1">&lt; 19</td><td class="q2">19 - 24</td><td class="q3">24 - 30</td><td class="q4">&gt; 30</td></tr>
-                                <tr><td>70-79</td><td class="q1">&lt; 17</td><td class="q2">17 - 22</td><td class="q3">22 - 28</td><td class="q4">&gt; 28</td></tr>
+                                <tr><td>20-29</td><td class="q1">Very Low</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q4">Excellent</td><td class="q4">Superior</td></tr>
+                                <tr><td>30-39</td><td class="q1">Very Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td></tr>
+                                <tr><td>40-49</td><td class="q1">Low</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q4">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td></tr>
+                                <tr><td>50-59</td><td class="q2">Below Avg</td><td class="q3">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td><td class="q4">Superior</td></tr>
+                                <tr><td>60-69</td><td class="q2">Average</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td><td class="q4">Superior</td><td class="q4">Superior</td></tr>
+                                <tr><td>70-79</td><td class="q3">Good</td><td class="q4">Excellent</td><td class="q4">Superior</td><td class="q4">Superior</td><td class="q4">Superior</td><td class="q4">Superior</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -110,52 +114,6 @@
                         <li><strong>Massive Returns from Small Gains:</strong> The Cooper Center Longitudinal Study showed that the greatest mortality reduction occurs when moving from "low" to "moderate" fitness -- the first improvements matter the most. This means that even sedentary individuals who start a modest exercise program can expect significant health benefits.<sup>[2]</sup></li>
                         <li><strong>Protects Against Chronic Disease:</strong> Higher VO2 max is independently associated with reduced risk of cardiovascular disease, type 2 diabetes, certain cancers, dementia, and depression. The Kodama meta-analysis found consistent protective effects across all of these conditions.<sup>[3]</sup></li>
                     </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- HOW TO MEASURE VO2 MAX & BENCHMARKS -->
-        <section class="content-section alternate">
-            <div class="container">
-                <div class="key-findings">
-                    <h3>How to Measure VO2 Max</h3>
-                    <h4>Cooper 1.5 Mile Run Test</h4>
-                    <p>The easiest and most accessible method for estimating your VO2 max is to run 1.5 miles for time. The 1.5-mile run test (also known as the Cooper 1.5-mile test) has been validated extensively against laboratory measurements and provides a reliable estimate of your cardiovascular fitness. All you need is a measured course (a standard 400-meter track works perfectly -- 6 laps) and a stopwatch.</p>
-                    <p><strong>What You Need:</strong> A standard 400m running track (6 laps = 1.5 miles) or a measured 1.5-mile route, and a stopwatch or phone timer.</p>
-                    <p><strong>Protocol:</strong> After a 5-10 minute warm-up of light jogging and dynamic stretching, run 1.5 miles as fast as you can sustain. Pace yourself -- starting too fast will slow you down overall. Record your total time in minutes and seconds.</p>
-                    <p><strong>The Formula:</strong> VO2 max (ml/kg/min) = 483 / time_in_minutes + 3.5. For example, if you run 1.5 miles in 12 minutes and 30 seconds (12.5 minutes), your estimated VO2 max is 483 / 12.5 + 3.5 = 42.1 ml/kg/min.</p>
-                    <p><strong>Accuracy:</strong> This field test typically estimates VO2 max within 10-15% of laboratory values. While not as precise as a lab test, it is more than adequate for tracking your fitness over time, which is the primary goal.</p>
-
-                    <div class="calculator-card" style="background: var(--bg-white); margin-top: var(--spacing-lg);">
-                        <h3>Calculate Your VO2 Max</h3>
-
-                        <div class="calc-form-row">
-                            <fieldset class="calc-fieldset">
-                                <legend>Run Time (mm:ss)</legend>
-                                <div style="display: flex; gap: var(--spacing-lg);">
-                                    <div class="calc-input-group">
-                                        <input type="number" id="calc-minutes" placeholder="Minutes" min="6" max="30">
-                                        <span>min</span>
-                                    </div>
-                                    <div class="calc-input-group">
-                                        <input type="number" id="calc-seconds" placeholder="Seconds" min="0" max="59">
-                                        <span>sec</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-
-                        <div class="calc-buttons">
-                            <button type="button" class="btn-reset" onclick="resetCalculator()">RESET</button>
-                            <button type="button" class="btn-calculate" onclick="calculateVO2Max()">CALCULATE</button>
-                        </div>
-
-                        <div class="calc-result" id="calc-result">
-                            <div class="calc-result-value" id="calc-vo2-value"></div>
-                            <div class="calc-result-label">Estimated VO2 Max (ml/kg/min)</div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -177,23 +135,6 @@
                 </div>
 
                 <div class="method">
-                    <h3>Zone 5: Tabata Training</h3>
-                    <p>Tabata training is a specific high-intensity interval protocol developed by Dr. Izumi Tabata and colleagues at the National Institute of Fitness and Sports in Tokyo. The original 1996 study demonstrated that this protocol improved both anaerobic capacity (28% increase) and VO2 max (14% increase) in just 6 weeks -- results that traditional steady-state cardio could not match in the same timeframe.<sup>[6]</sup></p>
-                    <p><strong>The Protocol:</strong> 20 seconds of all-out maximum effort followed by 10 seconds of rest, repeated for 8 rounds. Total working time: 4 minutes. That's it. If you can do more than 4 minutes at the prescribed intensity, you are not going hard enough.</p>
-                    <p><strong>Key Point:</strong> The 20-second work intervals must be performed at absolute maximum effort -- 100% intensity. This is not "hard." This is everything you have. You should feel like you physically cannot continue by rounds 6-8. If the last few rounds don't feel brutal, increase your resistance or speed.</p>
-                </div>
-
-                <div class="key-findings">
-                    <h3>Preferred Zone 5 Options</h3>
-                    <ul>
-                        <li><strong>Air Bike (Assault Bike / Echo Bike):</strong> The best choice for Tabata training. The air bike provides unlimited resistance that scales with effort -- the harder you push, the more resistance you get. It engages both upper and lower body simultaneously, is low-impact on joints, and makes it nearly impossible to cheat on intensity. Tabata on an air bike: 20 seconds all-out sprint, 10 seconds easy spin, 8 rounds.</li>
-                        <li><strong>Rowing Machine:</strong> An excellent alternative. The rowing machine also provides full-body engagement with scalable resistance and low joint impact. Tabata on a rower: 20 seconds maximum-effort rowing, 10 seconds easy rowing or rest, 8 rounds. Focus on power per stroke rather than stroke rate.</li>
-                        <li><strong>Sprinting at a Track:</strong> If you don't have gym equipment, sprint intervals at a track work well. Run at maximum effort for 20 seconds, walk or rest for 10 seconds, repeat 8 times. Be cautious of hamstring and joint injury risk, especially if you haven't sprinted recently. Always warm up thoroughly.</li>
-                        <li><strong>Burpees:</strong> A no-equipment option that can be done anywhere. Perform burpees at maximum speed for 20 seconds, rest 10 seconds, repeat 8 rounds. While effective for driving heart rate up, the technique breakdown at maximum effort can be a concern. Prioritize speed but maintain form.</li>
-                    </ul>
-                </div>
-
-                <div class="method">
                     <h3>The Right Intensity for Zone 2</h3>
                     <p>Zone 2 training should be performed at what's often called <strong>"conversation level"</strong> -- meaning the intensity at which you could still hold a conversation with somebody, but with noticeably labored breathing. You should be able to speak in full sentences, but you wouldn't want to give a speech. If you're gasping for air, you're going too hard. If you can talk effortlessly without any breathlessness, you're not going hard enough.</p>
                     <p><strong>Heart Rate Guide:</strong> Zone 2 is typically 60-70% of your maximum heart rate. A rough estimate of max heart rate is 220 minus your age. So for a 40-year-old, Zone 2 heart rate would be approximately 108-126 beats per minute.</p>
@@ -208,6 +149,23 @@
                         <li><strong>Stair Master / Step Mill:</strong> An excellent option that provides steady, controllable Zone 2 effort. Set a moderate pace and maintain it. The consistent stepping motion is easy to sustain and low impact compared to running.</li>
                         <li><strong>Easy Cycling:</strong> Stationary or outdoor cycling at a steady, moderate effort. Keep resistance and speed at a level where you're working but comfortable.</li>
                         <li><strong>Easy Jogging:</strong> For those comfortable with running, a slow, easy jog at conversation pace works well. Many runners go too fast on easy days -- slow down more than you think you need to.</li>
+                    </ul>
+                </div>
+
+                <div class="method">
+                    <h3>Zone 5: Tabata Training</h3>
+                    <p>Tabata training is a specific high-intensity interval protocol developed by Dr. Izumi Tabata and colleagues at the National Institute of Fitness and Sports in Tokyo. The original 1996 study demonstrated that this protocol improved both anaerobic capacity (28% increase) and VO2 max (14% increase) in just 6 weeks -- results that traditional steady-state cardio could not match in the same timeframe.<sup>[6]</sup></p>
+                    <p><strong>The Protocol:</strong> 20 seconds of all-out maximum effort followed by 10 seconds of rest, repeated for 8 rounds. Total working time: 4 minutes. That's it. If you can do more than 4 minutes at the prescribed intensity, you are not going hard enough.</p>
+                    <p><strong>Key Point:</strong> The 20-second work intervals must be performed at absolute maximum effort -- 100% intensity. This is not "hard." This is everything you have. You should feel like you physically cannot continue by rounds 6-8. If the last few rounds don't feel brutal, increase your resistance or speed.</p>
+                </div>
+
+                <div class="key-findings">
+                    <h3>Preferred Zone 5 Options</h3>
+                    <ul>
+                        <li><strong>Air Bike (Assault Bike / Echo Bike):</strong> The best choice for Tabata training. The air bike provides unlimited resistance that scales with effort -- the harder you push, the more resistance you get. It engages both upper and lower body simultaneously, is low-impact on joints, and makes it nearly impossible to cheat on intensity. Tabata on an air bike: 20 seconds all-out sprint, 10 seconds easy spin, 8 rounds.</li>
+                        <li><strong>Rowing Machine:</strong> An excellent alternative. The rowing machine also provides full-body engagement with scalable resistance and low joint impact. Tabata on a rower: 20 seconds maximum-effort rowing, 10 seconds easy rowing or rest, 8 rounds. Focus on power per stroke rather than stroke rate.</li>
+                        <li><strong>Sprinting at a Track:</strong> If you don't have gym equipment, sprint intervals at a track work well. Run at maximum effort for 20 seconds, walk or rest for 10 seconds, repeat 8 times. Be cautious of hamstring and joint injury risk, especially if you haven't sprinted recently. Always warm up thoroughly.</li>
+                        <li><strong>Burpees:</strong> A no-equipment option that can be done anywhere. Perform burpees at maximum speed for 20 seconds, rest 10 seconds, repeat 8 rounds. While effective for driving heart rate up, the technique breakdown at maximum effort can be a concern. Prioritize speed but maintain form.</li>
                     </ul>
                 </div>
             </div>
@@ -234,20 +192,20 @@
                 </div>
 
                 <div class="key-findings">
+                    <h3>Sample Zone 2 Workout</h3>
+                    <p><strong>Duration:</strong> Approximately 30 minutes of sustained Zone 2 effort.</p>
+                    <p><strong>Example (Incline Treadmill):</strong> Walk at 3.2 mph, 11% incline for 30 minutes. Adjust speed and incline to maintain conversational-level effort.</p>
+                    <p><strong>Example (Stair Master):</strong> Set to level 5-7 (varies by machine) and maintain steady pace for 30 minutes.</p>
+                    <p><strong>Recovery:</strong> You should feel mildly fatigued after the session but fully recovered within an hour. If you feel wiped out, reduce the intensity next time. Remember: you need to be able to do this again tomorrow.</p>
+                </div>
+
+                <div class="key-findings">
                     <h3>Sample Zone 5 Workout</h3>
                     <p><strong>Warm-up:</strong> 5 minutes of easy cycling or rowing at conversational pace.</p>
                     <p><strong>Tabata Protocol:</strong> 8 rounds of 20 seconds all-out / 10 seconds rest (4 minutes total).</p>
                     <p><strong>Cool-down:</strong> 3-5 minutes of easy movement and stretching.</p>
                     <p><strong>Total Time:</strong> Approximately 12-15 minutes including warm-up and cool-down.</p>
                     <p><strong>Important:</strong> Although the Tabata portion is only 4 minutes, this will be your <strong>entire workout for the day</strong>. A properly executed Tabata session is so demanding that additional training is counterproductive. Your body needs the rest of the day (and potentially the next day) to recover. Do not combine Zone 5 training with strength training or Zone 2 training on the same day.</p>
-                </div>
-
-                <div class="key-findings">
-                    <h3>Sample Zone 2 Workout</h3>
-                    <p><strong>Duration:</strong> Approximately 30 minutes of sustained Zone 2 effort.</p>
-                    <p><strong>Example (Incline Treadmill):</strong> Walk at 3.2 mph, 11% incline for 30 minutes. Adjust speed and incline to maintain conversational-level effort.</p>
-                    <p><strong>Example (Stair Master):</strong> Set to level 5-7 (varies by machine) and maintain steady pace for 30 minutes.</p>
-                    <p><strong>Recovery:</strong> You should feel mildly fatigued after the session but fully recovered within an hour. If you feel wiped out, reduce the intensity next time. Remember: you need to be able to do this again tomorrow.</p>
                 </div>
             </div>
         </section>
@@ -288,14 +246,11 @@
     <footer>
         <div class="container">
             <div class="footer-nav">
-                <a href="index.html">Welcome</a>
-                <a href="health-metrics.html">Health Metrics That Matter</a>
-                <a href="strength.html">Strength</a>
-                <a href="vo2max.html">Cardio</a>
-                <a href="body-fat.html">Body Fat</a>
-                <a href="ldl.html">Cholesterol</a>
-                <a href="blood-pressure.html">Blood Pressure</a>
-                <a href="tracking.html">Tracking Your Progress</a>
+                [ <a href="strength.html">Strength</a> ]
+                [ <a href="vo2max.html">Cardio</a> ]
+                [ <a href="body-fat.html">Body Fat</a> ]
+                [ <a href="ldl.html">Cholesterol</a> ]
+                [ <a href="blood-pressure.html">Blood Pressure</a> ]
             </div>
             <p>&copy; 2026 Compound Health. All content is for educational purposes and based on peer-reviewed research.</p>
             <p>Always consult with healthcare professionals before making significant health changes.</p>
@@ -305,30 +260,5 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/charts.js"></script>
     <script src="js/navigation.js"></script>
-    <script>
-        // VO2 Max Calculator
-        function calculateVO2Max() {
-            var minutes = parseInt(document.getElementById('calc-minutes').value) || 0;
-            var seconds = parseInt(document.getElementById('calc-seconds').value) || 0;
-
-            if (minutes < 6 || (minutes === 0 && seconds === 0)) {
-                alert('Please enter a valid run time (minimum 6 minutes).');
-                return;
-            }
-
-            var totalMinutes = minutes + (seconds / 60);
-            var vo2max = (483 / totalMinutes) + 3.5;
-            vo2max = Math.round(vo2max * 10) / 10;
-
-            document.getElementById('calc-vo2-value').textContent = vo2max;
-            document.getElementById('calc-result').classList.add('visible');
-        }
-
-        function resetCalculator() {
-            document.getElementById('calc-minutes').value = '';
-            document.getElementById('calc-seconds').value = '';
-            document.getElementById('calc-result').classList.remove('visible');
-        }
-    </script>
 </body>
 </html>
