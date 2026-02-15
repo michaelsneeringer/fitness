@@ -1,10 +1,11 @@
 // Chart.js visualizations
 document.addEventListener('DOMContentLoaded', function() {
     // Common chart options
+    const isMobile = window.innerWidth <= 768;
     const commonOptions = {
         responsive: true,
         maintainAspectRatio: true,
-        aspectRatio: 2,
+        aspectRatio: isMobile ? 1.2 : 2,
         plugins: {
             legend: {
                 display: true,
