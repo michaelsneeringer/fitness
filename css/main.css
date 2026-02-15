@@ -1087,8 +1087,12 @@ section {
 
 /* References */
 .references {
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     padding: var(--spacing-xxl) 0;
+}
+
+.references.alternate {
+    background-color: var(--bg-light);
 }
 
 .references ol {
